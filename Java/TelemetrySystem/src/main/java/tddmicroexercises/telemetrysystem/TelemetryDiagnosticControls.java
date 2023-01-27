@@ -7,9 +7,9 @@ public class TelemetryDiagnosticControls {
     private final Connection telemetryConnection;
     private String diagnosticInfo = "";
 
-    public TelemetryDiagnosticControls() {
-        telemetryClient = new TelemetryClient();
-        telemetryConnection = new TelemetryConnection();
+    public TelemetryDiagnosticControls(Client telemetryClient, Connection telemetryConnection) {
+        this.telemetryClient = telemetryClient;
+        this.telemetryConnection = telemetryConnection;
     }
 
     public String getDiagnosticInfo() {
